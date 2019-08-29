@@ -1,0 +1,19 @@
+{
+  "name": "request-har",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/request-har.js",
+  "scripts": {
+    "build": "tsc -p ."
+  },
+  "author": "Maciej Maciejewski <maciej.maciejewski@outlook.com>",
+  "license": "ISC",
+  "dependencies": {
+    "cookie": "^0.4.0",
+    "query-string": "^6.8.2"
+  },
+  "devDependencies": {
+    "@types/node": "^12.6.8",
+    "typescript": "^3.5.3"
+  }
+}
