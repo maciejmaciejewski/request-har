@@ -7,6 +7,14 @@
     "build": "tsc -p ."
   },
   "author": "Maciej Maciejewski <maciej.maciejewski@outlook.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maciejmaciejewski/request-har"
+  },
+  "bugs": {
+    "url": "https://github.com/maciejmaciejewski/request-har/issues"
+  },
+  "homepage": "https://github.com/maciejmaciejewski/request-har#readme",
   "license": "MIT",
   "dependencies": {
     "cookie": "^0.4.0",
