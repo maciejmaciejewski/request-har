@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc -p ."
   },
-  "author": "Maciej Maciejewski <maciej.maciejewski@outlook.com>",
+  "author": "Maciej Maciejewski <maciej.maciejewski@finastra.com>",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/maciejmaciejewski/request-har"
