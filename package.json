@@ -7,7 +7,7 @@
     "build": "tsc -p ."
   },
   "author": "Maciej Maciejewski <maciej.maciejewski@outlook.com>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "cookie": "^0.4.0",
     "query-string": "^6.8.2"
