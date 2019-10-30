@@ -1,22 +1,25 @@
-# request-har
+This library was designed for gathering HAR files from requests sent using `request` and `request-promise`
 
 ## Credits
 Inspiration and some pieces of the code comes from long forgotten repo
 https://github.com/paulirish/request-capture-har
 
-##
+It has been rewriten to TypeScript and extended.
 
 ## Usage
-In order to use this package simply import it and then pass either `request` or `request-promise` package into the constructor, which means that it will work for both sync and async calls. In order to perform an actual request simply use the `request()` method and pass the request options.
+In order to use this package import it and then pass either `request` or `request-promise` package into the constructor, which means that it will work for both sync and async calls.
+
+In order to perform an actual request simply use the `request()` method and pass the request options.
 
 Every single request is pushed into the array and can be dumped into a file in any time using `save()` method.
 
 In order to clear an array use `clear()` method.
 
 ## Example
-```
+
+```nodejs
 const RequestHar = require('request-har').RequestHar
-const har = new RequestHar(require('request-promise'))
+const har = new RequestHar(require('request-promise').defaults({resolveWithFullResponse: true}))
 
 let requestOptions = {
   url: 'https://jsonplaceholder.typicode.com/posts',
@@ -31,11 +34,20 @@ let requestOptions = {
 
 let response = await har.request(requestOptions)
 
-har.saveFile('./requests/json-placeholder.har')
+har.saveFile('./json-placeholder.har')
 ```
 
+Result file can be used to visualize requests using [Har viewer](http://www.softwareishard.com/har/viewer/)
+
+![Example](./docs/har-example.png)
+
+It can be also visualised by simply drag and dropping file onto Chrome network tab.
+
+![Example](./docs/chrome-example.png)
+
 Saving this will output as following json file which can be used to visualise
-```
+
+```json
 {
   "log": {
     "version": "1.2",
@@ -177,6 +189,3 @@ Saving this will output as following json file which can be used to visualise
   }
 }
 ```
-
-This file can be used to visualize requests
-![Example](./docs/har-example.png)
